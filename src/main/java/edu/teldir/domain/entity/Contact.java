@@ -2,10 +2,6 @@ package edu.teldir.domain.entity;
 
 import javax.persistence.*;
 
-/**
- * @author Anton German &lt;AGerman@luxoft.com&gt;
- * @version 1.0 10.04.12
- */
 @Entity
 @Table(name = "TD_CONTACT")
 @AttributeOverride(name = "id", column = @Column(name = "CONTACT_ID", nullable = false))

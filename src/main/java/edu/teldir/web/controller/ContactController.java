@@ -14,10 +14,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * @author Anton German &lt;AGerman@luxoft.com&gt;
- * @version 1.0 11.04.12
- */
 @Controller
 @RequestMapping("/contact/*")
 public class ContactController {
@@ -28,7 +24,7 @@ public class ContactController {
     public ModelAndView list() {
         Collection<Contact> contacts = contactService.getAllContacts();
 
-        List<ContactBean> beans = new ArrayList<ContactBean>(contacts.size());
+        List<ContactBean> beans = new ArrayList<>(contacts.size());
         for (Contact contact : contacts) {
             beans.add(new ContactBean(contact));
         }
